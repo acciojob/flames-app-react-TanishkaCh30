@@ -17,27 +17,28 @@ const FlamesApp = () => {
         let s1 = val.toLowerCase();
         let s2 = val2.toLowerCase();
 
-       
+        let arr1 = s1.split("");
+        let arr2 = s2.split("");
         let newArr = [];
-
-        for (let i = 0; i < s1.length; i++) {
+        let arr2Copy =[...arr2];
+        for (let i = 0; i < arr1.length; i++) {
             let found = false;
 
-            for (let j = 0; j < s2.length; j++) {
-                if (s1[i] === s2[j]) {
-                    s2.slice(j, 1);
+            for (let j = 0; j < arr2Copy.length; j++) {
+                if (arr1[i] === arr2Copy[j]) {
+                    arr2Copy.splice(j, 1);
                     found = true;
                     break;
                 }
             }
 
             if (!found) {
-                newArr.push(s1[i]);
+                newArr.push(arr1[i]);
             }
         }
 
 
-        newArr = newArr.concat(s2);
+        newArr = newArr.concat(arr2Copy);
 
 
 
@@ -61,7 +62,7 @@ const FlamesApp = () => {
             setVal3("Enemy");
         }
         else if (mod === 0) {
-            setVal3("Sibilings");
+            setVal3("Siblings");
         }
 
     }

@@ -76,7 +76,7 @@ const FlamesApp = () => {
             <input type="text" data-testid="input1" name="name1" onChange={((e) => {
                 setVal(e.target.value);
             })} value={val}></input>
-            <input type="text" data- testid="input2" name="name2" onChange={((e) => {
+            <input type="text" data-testid="input2" name="name2" onChange={((e) => {
                 setVal2(e.target.value);
             })} value={val2}></input>
             <button data-testid="calculate_relationship" name="calculate_relationship" onClick={calculateFuture}>Calculate Relationship Future</button>

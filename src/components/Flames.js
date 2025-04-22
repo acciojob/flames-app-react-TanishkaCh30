@@ -24,20 +24,18 @@ const FlamesApp = () => {
 
             for (let j = 0; j < arr2.length; j++) {
                 if (arr1[i] === arr2[j]) {
-                    // Found a match — remove from s2 and break
-                    arr2.splice(j, 1);
+                   arr2.splice(j, 1);
                     found = true;
                     break;
                 }
             }
 
             if (!found) {
-                // If no match in s2, keep it
                 newArr.push(arr1[i]);
             }
         }
 
-        // Add remaining characters from arr2 (those not matched)
+       
         newArr = newArr.concat(arr2);
 
         

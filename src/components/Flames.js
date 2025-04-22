@@ -43,7 +43,10 @@ const FlamesApp = () => {
         let length = newArr.length;
 
         let mod = length % 6;
-        if(mod===1){
+        if(val=== "" || val2===""){
+          setVal3("Please Enter valid input")
+        }
+        else if(mod===1){
          setVal3("Friends");
         }
         else if(mod===2){

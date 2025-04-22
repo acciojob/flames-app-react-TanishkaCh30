@@ -55,7 +55,7 @@ const FlamesApp = () => {
             setVal3("Affection");
         }
         else if(mod===4){
-            setVal3("Marraige");
+            setVal3("Marriage");
         }
         else if(mod===5){
             setVal3("Enemy");

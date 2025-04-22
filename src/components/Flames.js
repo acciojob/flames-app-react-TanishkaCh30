@@ -10,6 +10,11 @@ const FlamesApp = () => {
 
 
     function calculateFuture() {
+
+        if(val.trim() ==="" || val2.trim() ===""){
+            setVal3("Please Enter valid input");
+            return
+          }
         let s1 = val.toLowerCase();
        
 
@@ -43,10 +48,8 @@ const FlamesApp = () => {
         let length = newArr.length;
 
         let mod = length % 6;
-        if(val=== "" || val2===""){
-          setVal3("Please Enter valid input")
-        }
-        else if(mod===1){
+        
+         if(mod===1){
          setVal3("Friends");
         }
         else if(mod===2){
@@ -64,11 +67,13 @@ const FlamesApp = () => {
         else if(mod===0){
             setVal3("Sibilings");
         }
+         
     }
 
     function clearData(){
         setVal(" ");
         setVal2(" ");
+        setVal3(" ");
     }
 
     return (
@@ -82,7 +87,7 @@ const FlamesApp = () => {
             })} value={val2}></input>
             <button data-testid="calculate_relationship" name="calculate_relationship" onClick={calculateFuture}>Calculate Relationship Future</button>
             <button data-testid="clear" name="clear" onClick={clearData}>Clear</button>
-            <h3 data-testid="answer">{val3}</h3>
+            <h3 data-testid="answer" value={val3}>{val3}</h3>
         </div>
     )
 }

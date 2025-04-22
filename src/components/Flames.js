@@ -17,28 +17,27 @@ const FlamesApp = () => {
         let s1 = val.toLowerCase();
         let s2 = val2.toLowerCase();
 
-        let arr1 = s1.split("");
-        let arr2 = s2.split("");
+       
         let newArr = [];
 
-        for (let i = 0; i < arr1.length; i++) {
+        for (let i = 0; i < s1.length; i++) {
             let found = false;
 
-            for (let j = 0; j < arr2.length; j++) {
-                if (arr1[i] === arr2[j]) {
-                    arr2.splice(j, 1);
+            for (let j = 0; j < s2.length; j++) {
+                if (s1[i] === s2[j]) {
+                    s2.slice(j, 1);
                     found = true;
                     break;
                 }
             }
 
             if (!found) {
-                newArr.push(arr1[i]);
+                newArr.push(s1[i]);
             }
         }
 
 
-        newArr = newArr.concat(arr2);
+        newArr = newArr.concat(s2);
 
 
 
@@ -68,9 +67,9 @@ const FlamesApp = () => {
     }
 
     function clearData() {
-        setVal(" ");
-        setVal2(" ");
-        setVal3(" ");
+        setVal("");
+        setVal2("");
+        setVal3("");
     }
 
     return (
